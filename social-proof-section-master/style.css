@@ -18,14 +18,31 @@ body {
 
 body {
   font-family: 'League Spartan', sans-serif;
+  display: grid;
+  place-items: center;
 }
 
 p {
   font-size: 0.9375rem;
+  line-height: 1.4;
 }
 
 .hero {
   color: var(--color-magenta);
+  display: grid;
+  grid-template-columns: 400px 400px;
+  justify-content: space-between;
+}
+
+.heading,
+.rating-text {
+  font-weight: 700;
+}
+
+.heading {
+  font-size: 3rem;
+  line-height: 0.9;
+  margin-bottom: 1.25rem;
 }
 
 /* .testimonials {
@@ -33,6 +50,7 @@ p {
 } */
 
 .ratings {
+  place-self: center;
   display: grid;
   gap: 0.75rem;
 }
@@ -61,10 +79,4 @@ p {
   background-repeat: space;
   background-position: top;
   height: 18px;
-  /* border: solid red 1px; */
-}
-
-.rating-text {
-  color: var(--color-magenta);
-  font-weight: 700;
 }
