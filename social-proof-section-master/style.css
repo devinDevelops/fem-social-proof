@@ -8,6 +8,7 @@
 
 * {
   margin: 0;
+  font: inherit;
 }
 
 html,
@@ -16,6 +17,9 @@ body {
 }
 
 body {
-  font-size: 15px;
   font-family: 'League Spartan', sans-serif;
+}
+
+p {
+  font-size: 0.9375rem;
 }
