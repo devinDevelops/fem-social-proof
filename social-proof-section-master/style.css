@@ -23,3 +23,48 @@ body {
 p {
   font-size: 0.9375rem;
 }
+
+.hero {
+  color: var(--color-magenta);
+}
+
+/* .testimonials {
+  color: var(--color-neutral-light);
+} */
+
+.ratings {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.rating {
+  --offset-spacing: 35px;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  background-color: var(--color-neutral-light);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  width: 25rem;
+}
+
+.rating:nth-child(2) {
+  margin-left: var(--offset-spacing);
+}
+
+.rating:nth-child(3) {
+  margin-left: calc(var(--offset-spacing) * 2);
+}
+
+.stars {
+  background-image: url(/social-proof-section-master/images/icon-star.svg);
+  background-repeat: space;
+  background-position: top;
+  height: 18px;
+  /* border: solid red 1px; */
+}
+
+.rating-text {
+  color: var(--color-magenta);
+  font-weight: 700;
+}
