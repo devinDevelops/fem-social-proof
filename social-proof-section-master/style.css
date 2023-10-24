@@ -45,10 +45,6 @@ p {
   margin-bottom: 1.25rem;
 }
 
-/* .testimonials {
-  color: var(--color-neutral-light);
-} */
-
 .ratings {
   place-self: center;
   display: grid;
@@ -64,14 +60,15 @@ p {
   padding: 1rem 1.5rem;
   border-radius: 6px;
   width: 25rem;
+  position: relative;
+}
+
+.rating:nth-child(1) {
+  right: calc(var(--offset-spacing) * 2);
 }
 
 .rating:nth-child(2) {
-  margin-left: var(--offset-spacing);
-}
-
-.rating:nth-child(3) {
-  margin-left: calc(var(--offset-spacing) * 2);
+  right: var(--offset-spacing);
 }
 
 .stars {
@@ -79,4 +76,56 @@ p {
   background-repeat: space;
   background-position: top;
   height: 18px;
+}
+
+/* testimonials */
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  --offset-spacing: 15px;
+  background-color: var(--color-magenta);
+  color: var(--color-neutral-light);
+  border-radius: 6px;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  position: relative;
+}
+
+.card:nth-child(2) {
+  top: var(--offset-spacing);
+}
+
+.card:nth-child(3) {
+  top: calc(var(--offset-spacing) * 2);
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.testimony::before,
+.testimony::after {
+  content: ' "';
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.title {
+  color: var(--color-pink);
 }
