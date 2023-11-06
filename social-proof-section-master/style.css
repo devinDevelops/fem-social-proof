@@ -30,19 +30,19 @@ p {
 #social-proof {
   max-width: 60em;
   display: grid;
-  gap: 4rem;
-  padding: 1rem;
+  gap: 3rem;
+  padding: 1.5rem;
 }
 
 #social-proof::before {
-  content: url(./images/bg-pattern-top-desktop.svg);
+  content: url(./images/bg-pattern-top-mobile.svg);
   position: absolute;
   top: 0;
   left: 0;
 }
 
 #social-proof::after {
-  content: url(./images/bg-pattern-bottom-desktop.svg);
+  content: url(./images/bg-pattern-bottom-mobile.svg);
   position: absolute;
   bottom: 0;
   right: 0;
@@ -50,9 +50,6 @@ p {
 
 .hero {
   color: var(--color-magenta);
-  display: grid;
-  grid-template-columns: 400px 400px;
-  justify-content: space-between;
 }
 
 .heading,
@@ -67,29 +64,17 @@ p {
 }
 
 .ratings {
-  place-self: center;
   display: grid;
+  place-self: center;
   gap: 0.75rem;
 }
 
 .rating {
-  --offset-spacing: 35px;
   display: grid;
-  grid-template-columns: 100px 1fr;
   gap: 1.5rem;
   background-color: var(--color-neutral-light);
   padding: 1rem 1.5rem;
   border-radius: 6px;
-  width: 25rem;
-  position: relative;
-}
-
-.rating:nth-child(1) {
-  right: calc(var(--offset-spacing) * 2);
-}
-
-.rating:nth-child(2) {
-  right: var(--offset-spacing);
 }
 
 .stars {
@@ -103,27 +88,16 @@ p {
 
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .card {
-  --offset-spacing: 15px;
   background-color: var(--color-magenta);
   color: var(--color-neutral-light);
   border-radius: 6px;
   padding: 2rem;
   display: grid;
-  gap: 1rem;
-  position: relative;
-}
-
-.card:nth-child(2) {
-  top: var(--offset-spacing);
-}
-
-.card:nth-child(3) {
-  top: calc(var(--offset-spacing) * 2);
+  gap: 1.25rem;
 }
 
 .user-info {
@@ -135,7 +109,7 @@ p {
 
 .testimony::before,
 .testimony::after {
-  content: ' "';
+  content: '"';
 }
 
 .avatar {
@@ -149,4 +123,53 @@ p {
 
 .title {
   color: var(--color-pink);
+}
+
+@media screen and (min-width: 800px) {
+  #social-proof::before {
+    content: url(./images/bg-pattern-top-desktop.svg);
+  }
+
+  #social-proof::after {
+    content: url(./images/bg-pattern-bottom-desktop.svg);
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    justify-content: space-between;
+  }
+
+  .rating {
+    --offset-spacing: 35px;
+    position: relative;
+    grid-template-columns: 100px 1fr;
+    width: 25rem;
+  }
+
+  .rating:nth-child(1) {
+    right: calc(var(--offset-spacing) * 2);
+  }
+
+  .rating:nth-child(2) {
+    right: var(--offset-spacing);
+  }
+
+  .testimonials {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    --offset-spacing: 15px;
+    position: relative;
+  }
+
+  .card:nth-child(2) {
+    top: var(--offset-spacing);
+  }
+
+  .card:nth-child(3) {
+    top: calc(var(--offset-spacing) * 2);
+  }
 }
